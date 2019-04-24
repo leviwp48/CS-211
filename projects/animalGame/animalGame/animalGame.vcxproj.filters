@@ -29,9 +29,15 @@
     <ClInclude Include="playGame.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="stringSplitter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="game1.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="test.txt">
       <Filter>Resource Files</Filter>
     </Text>
   </ItemGroup>

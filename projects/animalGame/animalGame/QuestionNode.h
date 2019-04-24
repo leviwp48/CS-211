@@ -8,6 +8,7 @@ class QuestionNode
 {
 private:
 	string _value;
+	bool isLeaf = false;
 	QuestionNode* _left = nullptr;
 	QuestionNode* _right = nullptr;
 public:
@@ -22,6 +23,14 @@ public:
 	QuestionNode()
 	{
 		//no clue what _value will be
+	}
+
+	void setLeaf(bool checkLeaf) {
+		isLeaf = checkLeaf;
+	}
+
+	bool getLeaf() {
+		return isLeaf;
 	}
 
 	QuestionNode* getLeft()
@@ -53,4 +62,21 @@ public:
 	{
 		_value = value;
 	}
+
+	virtual bool isLeafNode(QuestionNode* nodeCheck = nullptr) {
+
+		if (nodeCheck->getValue()[0] == '*') {
+			return true;
+		}
+		else if (nodeCheck == nullptr) {
+			return false;
+		}
+		//if (_root->getLeft() == nullptr && _root->getRight() == nullptr) {
+			//return true;
+		//}
+
+
+		return false;
+	}
+
 };
