@@ -78,17 +78,6 @@ protected:
 
 	virtual QuestionNode* treeAddSet(QuestionNode* node, string newAnimal, string description = "", string answer = "")
 	{
-		/*
-		QuestionNode* newRight = new QuestionNode(newAnimal);
-		newRight->setLeaf(true);
-		QuestionNode* newLeft = new QuestionNode(node->getValue());
-		
-		node->setValue(description);
-		node->setLeaf(false);
-		node->setRight(newRight);
-		node->setLeft(newLeft);
-		*/
-
 		if (answer == "yes") {
 		}
 		return node;
@@ -161,6 +150,7 @@ public:
 			addNode("*dog");
 		}
 		else {	
+			buildFile = "E:\\Users\\Levi Pole\\Documents\\Projects\\C++\\CS-211\\projects\\animalGame\\gameFiles\\" + buildFile;
 			ifstream treeFile{ buildFile };
 			if (treeFile.is_open()) {
 				while (treeFile.good()) {

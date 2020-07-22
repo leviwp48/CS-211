@@ -1,0 +1,5 @@
+Does it walk on 4 legs?
+*bird
+does it purr?
+*dog
+*cat
